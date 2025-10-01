@@ -1,0 +1,202 @@
+body{
+    background-color: bisque;
+    overflow: hidden;
+    background-image: url(image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#head2{
+    position: relative;
+    left: 460px;
+    width: 450px;
+    top: 10px;
+    color:black;
+    background-color: wheat;
+}
+
+#head1{
+    position: relative;
+    left: 590px;
+    top: 60px;
+    color:rgb(0, 0, 0);
+    background-color: wheat;
+    width: 180px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    background-color: transparent;
+    height: 400px;
+    width: 301px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 530px;
+    top: 32px;
+    flex-wrap: wrap;
+
+}
+
+
+
+@keyframes rotate-in {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0;
+      
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  .winner-animation {
+    display: inline-block;
+    
+    animation-name: rotate-in;
+    animation-duration: 1s;
+    animation-timing-function:ease-out;
+  }
+
+  .winner-animation1 {
+    display: inline-block;
+    animation-name: rotate-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+
+
+
+#head11{
+
+    position: relative;
+    color: white;
+    left: 436px;
+    top: 23px;
+    width: 480px;
+    z-index: 1;
+    font-size: 28px;
+    background-color: wheat;
+}
+
+#draw{
+    position: relative;
+    left: 186px;
+    font-size: 28px;
+}
+
+#reset{
+    position: relative;
+    top: -12px;
+    left: 634px;
+    height: 50px;
+    width: 100px;
+    font-weight: 600;
+    background-color: transparent;
+    color: black;
+}
+
+#but1{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    color: black;
+    font-size: 40px;
+    border-width: 5px;
+    background-color: white;
+    
+}
+#but2{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: black;
+    font-size: 40px;
+    background-color: white;
+}
+#but3{
+    height: 100px;
+    width: 100px;
+    border-width: 5px;
+    border-radius: 10px;
+    color: black;
+    font-size: 40px;
+    background-color: white;
+}
+#but4{
+    height: 100px;
+    width: 100px;
+    border-width: 5px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    top: -33px;
+    font-size: 40px;
+    color: black;
+}
+#but5{
+    height: 100px;
+    width: 100px;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    color: black;
+    top: -33px;
+    font-size: 40px;
+}
+#but6{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    position: relative;
+    background-color: white;
+    border-width: 5px;
+    top: -33px;
+    color: black;
+    font-size: 40px;
+}
+#but7{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    position: relative;
+    top: -66px;
+    color: black;
+    border-width: 5px;
+    background-color: white;
+    font-size: 40px;
+}
+#but8{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    position: relative;
+    top: -66px;
+    border-width: 5px;
+    font-size: 40px;
+
+}
+#but9{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    border-width: 5px;
+    top: -66px;
+    color: black;
+    font-size: 40px;
+}
+
