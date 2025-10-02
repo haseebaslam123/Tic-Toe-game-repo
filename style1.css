@@ -1,50 +1,89 @@
+/* General Body Styling */
 body {
     background-color: bisque;
-    overflow: hidden;
     background-image: url(image1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+/* Main Headings */
 #head2 {
-    position: relative;
-    left: 460px;
-    width: 518px;
-    top: 10px;
+    text-align: center;
+    margin: 20px auto 10px auto;
     color: black;
     background-color: wheat;
-   
-}
-
-#head1 {
-    position: relative;
-    left: 590px;
-    top: 40px;
-    color: rgb(0, 0, 0);
-    background-color: wheat;
-    width: 187px;
+    padding: 8px 16px;
+    font-size: 24px;
     white-space: nowrap;   /* keep text in one line */
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
+#head1 {
+    text-align: center;
+    margin: 10px auto;
+    color: black;
+    background-color: wheat;
+    padding: 6px 12px;
+    font-size: 20px;
+    white-space: nowrap;
 }
 
+/* Winner & Draw Messages */
+#head11, #draw {
+    text-align: center;
+    margin: -16px auto;
+    font-size: 20px;
+    background-color: wheat;
+    padding: 6px 12px;
+    color: black;
+}
+
+/* Game Board Container (3x3 Grid) */
 #container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 6px;
+    margin: 20px auto;
     background-color: transparent;
-    height: 400px;
-    width: 301px;
+}
+
+/* Reset Button */
+#reset {
+    display: block;
+    margin: 20px auto;
+    height: 50px;
+    width: 120px;
+    font-weight: 600;
+    background-color: wheat;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Buttons (Game Boxes) */
+#but1, #but2, #but3,
+#but4, #but5, #but6,
+#but7, #but8, #but9 {
+    border-radius: 10px;
+    border: 3px solid black;
+    font-size: 40px;
+    color: black;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    left: 530px;
-    top: 0px;
-    flex-wrap: wrap;
 }
 
+/* Animations */
 @keyframes rotate-in {
     0% {
         transform: rotate(0deg);
@@ -56,13 +95,7 @@ body {
     }
 }
 
-.winner-animation {
-    display: inline-block;
-    animation-name: rotate-in;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-
+.winner-animation,
 .winner-animation1 {
     display: inline-block;
     animation-name: rotate-in;
@@ -70,53 +103,33 @@ body {
     animation-timing-function: ease-out;
 }
 
-#head11 {
-    position: relative;
-    color: white;
-    left: 436px;
-    top: 0px;
-    width: 480px;
-    z-index: 1;
-    font-size: 28px;
-    background-color: wheat;
-}
-
-#draw {
-    position: relative;
-    left: 186px;
-    font-size: 28px;
-    top: 0px;
-}
-
-#reset {
-    position: relative;
-    top: 15px;   /* moved up a little but still under board */
-    left: 634px;
-    height: 50px;
-    width: 100px;
-    font-weight: 600;
-    background-color: transparent;
-    color: white;
-}
-
-#but1, #but2, #but3,
-#but4, #but5, #but6,
-#but7, #but8, #but9 {
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    border-width: 5px;
-    color: black;
-    font-size: 40px;
-    background-color: white;
-}
-
-#but4, #but5, #but6 {
-    position: relative;
-    top: -33px;
-}
-
-#but7, #but8, #but9 {
-    position: relative;
-    top: -66px;
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    #head2 {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+    #head1 {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+    #head11, #draw {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+    #container {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 4px;
+    }
+    #but1, #but2, #but3,
+    #but4, #but5, #but6,
+    #but7, #but8, #but9 {
+        font-size: 28px;
+    }
+    #reset {
+        width: 100px;
+        height: 45px;
+        font-size: 14px;
+    }
 }
